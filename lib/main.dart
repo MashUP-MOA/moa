@@ -519,13 +519,15 @@ class MyStatelessWidget extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: '홈',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.smart_button),
+            icon: Icon(Icons.lightbulb_outline),
             label: '스마트추천',
           ),
           BottomNavigationBarItem(
@@ -538,6 +540,7 @@ class MyStatelessWidget extends StatelessWidget {
           ),
         ],
         selectedItemColor: Color.fromRGBO(78, 67, 187, 1.0),
+        unselectedItemColor: Colors.black87,
       ),
     );
   }
