@@ -465,6 +465,18 @@ class MyStatelessWidget extends StatelessWidget {
                             ),
                             Expanded(
                               child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                child: Text(
+                                  '티빙',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold
+                                  )
+                                ),
+
+                              )
+                            ),
+                            Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -506,7 +518,6 @@ class MyStatelessWidget extends StatelessWidget {
                                   ],
                                 )
                               )
-                            )
                           ],
                         ),
                       ),
