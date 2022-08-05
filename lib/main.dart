@@ -31,7 +31,7 @@ class _MarketPageState extends State<MyWidget> {
 
   final List _widgetOptions = [
     HomeWidget(),
-    Text('page2'),
+    RecommendWidget(),
     Text('page3'),
     Text('page4'),
   ];

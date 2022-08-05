@@ -10,7 +10,7 @@ class HomeWidget extends StatelessWidget {
         title: const Text(
           'M O A',
           style: TextStyle(
-            fontSize: 24,
+            fontSize: 22,
             fontWeight: FontWeight.bold,
           ),
         ),
