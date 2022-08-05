@@ -124,7 +124,7 @@ class RecommendWidget extends StatelessWidget {
                                           child: Text(
                                             'Netflix',
                                             style: TextStyle(
-                                                fontSize: 15,
+                                                fontSize: 17,
                                                 fontWeight: FontWeight.bold
                                             )
                                           )
@@ -213,7 +213,7 @@ class RecommendWidget extends StatelessWidget {
                                               child: Text(
                                                   'Wavve',
                                                   style: TextStyle(
-                                                      fontSize: 15,
+                                                      fontSize: 17,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               )
@@ -526,7 +526,7 @@ class RecommendWidget extends StatelessWidget {
                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
                                                   'A Playful Kiss',
                                                   style: TextStyle(
@@ -621,7 +621,7 @@ class RecommendWidget extends StatelessWidget {
                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
                                                   'Bridgerton',
                                                   style: TextStyle(

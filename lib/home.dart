@@ -65,7 +65,7 @@ class HomeWidget extends StatelessWidget {
                               mainAxisSize: MainAxisSize.max,
                               children: const [
                                 Text(
-                                  '환영합니다, ',
+                                  'Welcome, ',
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -74,7 +74,7 @@ class HomeWidget extends StatelessWidget {
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
                                   child: Text(
-                                    '김지수님!',
+                                    'JISU!',
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,

@@ -48,28 +48,35 @@ class _MarketPageState extends State<MyWidget> {
     return Scaffold(
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        //showSelectedLabels: false,
+        //showUnselectedLabels: false,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: '홈',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.lightbulb_outline),
-            label: '스마트추천',
+            label: 'Recommend',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.folder_open),
-            label: '컨텐츠리뷰',
+            label: 'Review',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle_rounded),
-            label: '마이페이지',
+            label: 'Mypage',
           ),
         ],
         selectedItemColor: Color.fromRGBO(78, 67, 187, 1.0),
         unselectedItemColor: Colors.black87,
+        selectedLabelStyle: TextStyle(
+          color: Color.fromRGBO(78, 67, 187, 1.0),
+        ),
+        unselectedLabelStyle: TextStyle(
+          color: Colors.black87,
+        ),
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
       ),
