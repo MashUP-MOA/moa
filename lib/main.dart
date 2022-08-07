@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
 import 'recommend.dart';
+import 'mypage.dart';
 
 void main() => runApp(const MyApp());
 
@@ -33,7 +34,7 @@ class _MarketPageState extends State<MyWidget> {
     HomeWidget(),
     RecommendWidget(),
     Text('page3'),
-    Text('page4'),
+    MypageWidget(),
   ];
 
   void _onItemTapped(int index) {
