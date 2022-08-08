@@ -678,7 +678,387 @@ class RecommendWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              )
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                                child: Container(
+                                  width: 140,
+                                  height: 190,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x230E151B),
+                                        offset: Offset(0, 2),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius: BorderRadius.circular(10),
+                                          child: Image.asset(
+                                            'assets/movie_ladybird.jpeg',
+                                            width: 140,
+                                            height: 140,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                              child: Text(
+                                                  'Lady Bird',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.bold
+                                                  )
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                    child: Text(
+                                                        'Netflix',
+                                                        style: TextStyle(
+                                                            fontSize: 13,
+                                                            fontWeight: FontWeight.w500,
+                                                            color: Colors.deepOrangeAccent
+                                                        )
+                                                    )
+                                                ),
+                                                Row(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Icon(
+                                                          Icons.star_rounded,
+                                                          color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                          size: 12,
+                                                        )
+                                                    ),
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Text(
+                                                            '4.3',
+                                                            style: TextStyle(
+                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                                fontSize: 13,
+                                                                fontWeight: FontWeight.w500
+                                                            )
+                                                        )
+                                                    )
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                                child: Container(
+                                  width: 140,
+                                  height: 190,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x230E151B),
+                                        offset: Offset(0, 2),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius: BorderRadius.circular(10),
+                                          child: Image.asset(
+                                            'assets/movie_augustrush.jpg',
+                                            width: 140,
+                                            height: 140,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                              child: Text(
+                                                  'August Rush',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.bold
+                                                  )
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                    child: Text(
+                                                        'Neflix',
+                                                        style: TextStyle(
+                                                            fontSize: 13,
+                                                            fontWeight: FontWeight.w500,
+                                                            color: Colors.deepOrangeAccent
+                                                        )
+                                                    )
+                                                ),
+                                                Row(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Icon(
+                                                          Icons.star_rounded,
+                                                          color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                          size: 12,
+                                                        )
+                                                    ),
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Text(
+                                                            '4.0',
+                                                            style: TextStyle(
+                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                                fontSize: 13,
+                                                                fontWeight: FontWeight.w500
+                                                            )
+                                                        )
+                                                    )
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                                child: Container(
+                                  width: 140,
+                                  height: 190,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x230E151B),
+                                        offset: Offset(0, 2),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius: BorderRadius.circular(10),
+                                          child: Image.asset(
+                                            'assets/drama_sanae.jpeg',
+                                            width: 140,
+                                            height: 140,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                              child: Text(
+                                                  'An In-house Meeting',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.bold
+                                                  )
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                    child: Text(
+                                                        'Wavve',
+                                                        style: TextStyle(
+                                                            fontSize: 13,
+                                                            fontWeight: FontWeight.w500,
+                                                            color: Colors.deepOrangeAccent
+                                                        )
+                                                    )
+                                                ),
+                                                Row(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Icon(
+                                                          Icons.star_rounded,
+                                                          color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                          size: 12,
+                                                        )
+                                                    ),
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Text(
+                                                            '3.8',
+                                                            style: TextStyle(
+                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                                fontSize: 13,
+                                                                fontWeight: FontWeight.w500
+                                                            )
+                                                        )
+                                                    )
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                                child: Container(
+                                  width: 140,
+                                  height: 190,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x230E151B),
+                                        offset: Offset(0, 2),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius: BorderRadius.circular(10),
+                                          child: Image.asset(
+                                            'assets/drama_brams.jpeg',
+                                            width: 140,
+                                            height: 140,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                              child: Text(
+                                                  'Do you like Brahms?',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.bold
+                                                  )
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                    child: Text(
+                                                        'Wavve',
+                                                        style: TextStyle(
+                                                            fontSize: 13,
+                                                            fontWeight: FontWeight.w500,
+                                                            color: Colors.deepOrangeAccent
+                                                        )
+                                                    )
+                                                ),
+                                                Row(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Icon(
+                                                          Icons.star_rounded,
+                                                          color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                          size: 12,
+                                                        )
+                                                    ),
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Text(
+                                                            '4.1',
+                                                            style: TextStyle(
+                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                                fontSize: 13,
+                                                                fontWeight: FontWeight.w500
+                                                            )
+                                                        )
+                                                    )
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ],
                           )
                         )
