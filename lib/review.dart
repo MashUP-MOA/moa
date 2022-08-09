@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'review_search.dart';
 
 class ReviewWidget extends StatefulWidget {
   const ReviewWidget({Key? key}) : super(key: key);
@@ -66,45 +67,66 @@ class _ReviewWidgetState extends State<ReviewWidget> with TickerProviderStateMix
                       )
                     ]
                   ),
-                  child: Column(
+                  child: Row(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 10),
-                        child: TextFormField(
-                          controller: textController,
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            labelText: 'Search products...',
-                            labelStyle: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black38,
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
+                        padding: EdgeInsetsDirectional.fromSTEB(16, 12, 0, 10),
+                        child: SizedBox(
+                          width: 310.0,
+                          child: TextFormField(
+                            controller: textController,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Search Hashtags',
+                              labelStyle: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black38,
                               ),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(12),
                               ),
-                              borderRadius: BorderRadius.circular(12),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              filled: true,
+                              fillColor: Colors.white,
                             ),
-                            filled: true,
-                            fillColor: Colors.white,
-                            prefixIcon: Icon(
-                              Icons.search_rounded,
-                              color: Colors.black38
+                            style: TextStyle(
+                                color: Colors.black
                             ),
                           ),
-                          style: TextStyle(
-                            color: Colors.black
-                          ),
-                        ),
+                        )
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 2, 7, 0),
+                        child: Container(
+                            width: 50,
+                            child: TextButton(
+                              style: ButtonStyle(
+                                foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const ReviewSearchWidget()),
+                                );
+                              },
+                              child: Icon(
+                                  Icons.search,
+                                  size: 27
+                              ),
+                            )
+                        )
                       )
                     ],
                   ),
