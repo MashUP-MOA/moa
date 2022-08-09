@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 import 'recommend.dart';
 import 'mypage.dart';
+<<<<<<< HEAD
+import 'review_info.dart';
+=======
 import 'review.dart';
+>>>>>>> main
 
 void main() => runApp(const MyApp());
 
