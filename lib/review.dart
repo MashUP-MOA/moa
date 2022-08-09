@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'review_info.dart';
 
 class ReviewWidget extends StatefulWidget {
   const ReviewWidget({Key? key}) : super(key: key);
@@ -167,7 +167,7 @@ class _ReviewWidgetState extends State<ReviewWidget> with TickerProviderStateMix
                                               onTap: () {
                                                 Navigator.push(
                                                   context,
-                                                  MaterialPageRoute(builder: (context) => const HomeWidget()),
+                                                  MaterialPageRoute(builder: (context) => const ReviewInfoWidget()),
                                                 );
                                               },
                                               child: Container(
