@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 import 'recommend.dart';
 import 'mypage.dart';
+import 'review_info.dart';
 
 void main() => runApp(const MyApp());
 
@@ -33,7 +34,7 @@ class _MarketPageState extends State<MyWidget> {
   final List _widgetOptions = [
     HomeWidget(),
     RecommendWidget(),
-    Text('page3'),
+    ReviewInfoWidget(),
     MypageWidget(),
   ];
 
