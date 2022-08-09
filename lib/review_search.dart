@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'recommend.dart';
+import 'review.dart';
+import 'mypage.dart';
 
 class ReviewSearchWidget extends StatefulWidget {
   const ReviewSearchWidget({Key? key}) : super(key: key);
@@ -23,6 +26,22 @@ class _ReviewSearchWidgetState extends State<ReviewSearchWidget> with TickerProv
     textController = TextEditingController();
   }
 
+  int _selectedIndex = 0;
+
+  final List _widgetOptions = [
+    HomeWidget(),
+    RecommendWidget(),
+    ReviewWidget(),
+    MypageWidget(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,6 +64,39 @@ class _ReviewSearchWidgetState extends State<ReviewSearchWidget> with TickerProv
                 )
             )
           ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          //showSelectedLabels: false,
+          //showUnselectedLabels: false,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.lightbulb_outline),
+              label: 'Recommend',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.folder_open),
+              label: 'Review',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle_rounded),
+              label: 'Mypage',
+            ),
+          ],
+          selectedItemColor: Color.fromRGBO(78, 67, 187, 1.0),
+          unselectedItemColor: Colors.black87,
+          selectedLabelStyle: TextStyle(
+            color: Color.fromRGBO(78, 67, 187, 1.0),
+          ),
+          unselectedLabelStyle: TextStyle(
+            color: Colors.black87,
+          ),
+          currentIndex: 2,
+          onTap: _onItemTapped,
         ),
         body: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
