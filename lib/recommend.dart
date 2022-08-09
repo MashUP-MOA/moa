@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
-class RecommendWidget extends StatelessWidget {
+class RecommendWidget extends StatefulWidget {
   const RecommendWidget({Key? key}) : super(key: key);
+
+  @override _RecommendState createState() => _RecommendState();
+}
+
+class _RecommendState extends State<RecommendWidget> {
+  List tests = [];
 
   @override
   Widget build(BuildContext context) {
