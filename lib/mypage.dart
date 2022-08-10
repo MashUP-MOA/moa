@@ -434,11 +434,11 @@ class _MypageState extends State<MypageWidget> with TickerProviderStateMixin {
                                                                       decoration: BoxDecoration(
                                                                         shape: BoxShape.circle,
                                                                       ),
-                                                                      child: Image.asset('assets/disney.png'),
+                                                                      child: Image.asset('assets/wavve.png'),
                                                                     ),
                                                                   ),
                                                                   Text(
-                                                                    'Disney+',
+                                                                    'Wavve',
                                                                     style: TextStyle(
                                                                       fontSize: 15,
                                                                       fontWeight: FontWeight.w500,

@@ -213,13 +213,13 @@ class _RecommendState extends State<RecommendWidget> {
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                           ),
-                                          child: Image.asset('assets/wavve.png'),
+                                          child: Image.asset('assets/disney.png'),
                                         ),
                                         Expanded(
                                           child: Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                                               child: Text(
-                                                  'Wavve',
+                                                  'Disney +',
                                                   style: TextStyle(
                                                       fontSize: 17,
                                                       fontWeight: FontWeight.bold
@@ -248,7 +248,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     Padding(
                                                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                                                       child: Text(
-                                                          '#drama',
+                                                          '#animation',
                                                           style: TextStyle(
                                                               fontSize: 14,
                                                               fontWeight: FontWeight.w600,
@@ -257,7 +257,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                       ),
                                                     ),
                                                     Text(
-                                                        '#entertainment',
+                                                        '#drama',
                                                         style: TextStyle(
                                                             fontSize: 14,
                                                             fontWeight: FontWeight.w600,
