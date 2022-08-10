@@ -173,8 +173,8 @@ class HomeWidget extends StatelessWidget {
                                             children: [
                                               ClipRRect(
                                                 borderRadius: BorderRadius.circular(10),
-                                                child: Image.asset(
-                                                  'assets/movie_crazyrich.jpeg',
+                                                child: Image.network(
+                                                  'https://resizing.flixster.com/5IJ0ez1JUJvg_1jshfxawRj3i-o=/180x258/v2/https://resizing.flixster.com/1-wvTp-iuqaDikrorqZBaYQdFvo=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzkzYTk5ZTVjLWJmYjYtNGYxYS1hMzQzLTI0NTAyNGNhMDVhYy5qcGc=',
                                                   width: 140,
                                                   height: 140,
                                                   fit: BoxFit.cover,
@@ -187,7 +187,102 @@ class HomeWidget extends StatelessWidget {
                                                   Padding(
                                                     padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                                     child: Text(
-                                                        'Crazy Rich Asians',
+                                                        'WEST SIDE STORY',
+                                                        style: TextStyle(
+                                                            fontSize: 14,
+                                                            fontWeight: FontWeight.bold
+                                                        )
+                                                    ),
+                                                  ),
+                                                  Row(
+                                                    mainAxisSize: MainAxisSize.max,
+                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                    children: [
+                                                      Padding(
+                                                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                          child: Text(
+                                                              'Disney',
+                                                              style: TextStyle(
+                                                                  fontSize: 13,
+                                                                  fontWeight: FontWeight.w500,
+                                                                  color: Colors.deepOrangeAccent
+                                                              )
+                                                          )
+                                                      ),
+                                                      Row(
+                                                        mainAxisSize: MainAxisSize.max,
+                                                        mainAxisAlignment: MainAxisAlignment.end,
+                                                        children: [
+                                                          Padding(
+                                                              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                              child: Icon(
+                                                                Icons.star_rounded,
+                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                                size: 12,
+                                                              )
+                                                          ),
+                                                          Padding(
+                                                              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                              child: Text(
+                                                                  '4.8',
+                                                                  style: TextStyle(
+                                                                      color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                                      fontSize: 13,
+                                                                      fontWeight: FontWeight.w500
+                                                                  )
+                                                              )
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                                      child: Container(
+                                        width: 140,
+                                        height: 190,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          boxShadow: [
+                                            BoxShadow(
+                                              blurRadius: 4,
+                                              color: Color(0x230E151B),
+                                              offset: Offset(0, 2),
+                                            )
+                                          ],
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                        child: Padding(
+                                          padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(10),
+                                                child: Image.network(
+                                                  'https://resizing.flixster.com/M7gpkkiPbqN16wAU07WxMl-DNEo=/180x258/v2/https://resizing.flixster.com/9MUxWQfhY5QCNDpeaFq5up8z9Ug=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQ0MGFlNTQ5LTRkMzAtNDNhMi1hZDZlLTVmMzA5YTAyNzcyNC5qcGc=',
+                                                  width: 140,
+                                                  height: 140,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                                    child: Text(
+                                                        'PERSUASION',
                                                         style: TextStyle(
                                                             fontSize: 14,
                                                             fontWeight: FontWeight.bold
@@ -224,7 +319,7 @@ class HomeWidget extends StatelessWidget {
                                                           Padding(
                                                               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                               child: Text(
-                                                                  '3.9',
+                                                                  '4.8',
                                                                   style: TextStyle(
                                                                       color: Color.fromRGBO(78, 67, 187, 1.0),
                                                                       fontSize: 13,
@@ -268,8 +363,8 @@ class HomeWidget extends StatelessWidget {
                                             children: [
                                               ClipRRect(
                                                 borderRadius: BorderRadius.circular(10),
-                                                child: Image.asset(
-                                                  'assets/movie_fromtoday.jpeg',
+                                                child: Image.network(
+                                                  'https://resizing.flixster.com/ha1tQmzVp2tUMeRoGuapifrojpw=/180x258/v2/https://resizing.flixster.com/ydPRPZqSxAkNVAyzRUv0HmWt2iA=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2JkYWVlN2U5LTM1MWMtNGViZC1hMzNiLThkYTk3NzRhZDIzNC5qcGc=',
                                                   width: 140,
                                                   height: 140,
                                                   fit: BoxFit.cover,
@@ -282,7 +377,7 @@ class HomeWidget extends StatelessWidget {
                                                   Padding(
                                                     padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                                     child: Text(
-                                                        'From Today',
+                                                        'DARLINGS',
                                                         style: TextStyle(
                                                             fontSize: 14,
                                                             fontWeight: FontWeight.bold
@@ -296,7 +391,7 @@ class HomeWidget extends StatelessWidget {
                                                       Padding(
                                                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                           child: Text(
-                                                              'Wavve',
+                                                              'Netflix',
                                                               style: TextStyle(
                                                                   fontSize: 13,
                                                                   fontWeight: FontWeight.w500,
@@ -319,102 +414,7 @@ class HomeWidget extends StatelessWidget {
                                                           Padding(
                                                               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                               child: Text(
-                                                                  '4.1',
-                                                                  style: TextStyle(
-                                                                      color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                      fontSize: 13,
-                                                                      fontWeight: FontWeight.w500
-                                                                  )
-                                                              )
-                                                          )
-                                                        ],
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                                      child: Container(
-                                        width: 140,
-                                        height: 190,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 4,
-                                              color: Color(0x230E151B),
-                                              offset: Offset(0, 2),
-                                            )
-                                          ],
-                                          borderRadius: BorderRadius.circular(12),
-                                        ),
-                                        child: Padding(
-                                          padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              ClipRRect(
-                                                borderRadius: BorderRadius.circular(10),
-                                                child: Image.asset(
-                                                  'assets/movie_kiss.jpeg',
-                                                  width: 140,
-                                                  height: 140,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                children: [
-                                                  Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                                                    child: Text(
-                                                        'A Playful Kiss',
-                                                        style: TextStyle(
-                                                            fontSize: 14,
-                                                            fontWeight: FontWeight.bold
-                                                        )
-                                                    ),
-                                                  ),
-                                                  Row(
-                                                    mainAxisSize: MainAxisSize.max,
-                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                    children: [
-                                                      Padding(
-                                                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                          child: Text(
-                                                              'Wavve',
-                                                              style: TextStyle(
-                                                                  fontSize: 13,
-                                                                  fontWeight: FontWeight.w500,
-                                                                  color: Colors.deepOrangeAccent
-                                                              )
-                                                          )
-                                                      ),
-                                                      Row(
-                                                        mainAxisSize: MainAxisSize.max,
-                                                        mainAxisAlignment: MainAxisAlignment.end,
-                                                        children: [
-                                                          Padding(
-                                                              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                              child: Icon(
-                                                                Icons.star_rounded,
-                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                size: 12,
-                                                              )
-                                                          ),
-                                                          Padding(
-                                                              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                              child: Text(
-                                                                  '3.8',
+                                                                  '4.3',
                                                                   style: TextStyle(
                                                                       color: Color.fromRGBO(78, 67, 187, 1.0),
                                                                       fontSize: 13,

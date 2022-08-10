@@ -3,6 +3,7 @@ import 'home.dart';
 import 'recommend.dart';
 import 'mypage.dart';
 import 'review.dart';
+import 'loading.dart';
 
 void main() => runApp(const MyApp());
 
@@ -51,8 +52,6 @@ class _MarketPageState extends State<MyWidget> {
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        //showSelectedLabels: false,
-        //showUnselectedLabels: false,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

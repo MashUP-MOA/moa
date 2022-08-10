@@ -16,18 +16,6 @@ class _ReviewInfoWidgetState extends State<ReviewInfoWidget> {
         return Scaffold(
             key: ScaffoldKey,
             backgroundColor: Color(0xffFFFFFF),//secondaryBackground
-            floatingActionButton: FloatingActionButton(
-                onPressed:(){
-                    print("FloatingActionButton pressed...");
-                },
-                backgroundColor: Color(0xff4B39EF),//primaryColor
-                elevation: 8,
-                child: Icon(
-                    Icons.create_rounded,
-                    color: Colors.white,
-                    size: 24,
-                ),
-            ),
             body: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [

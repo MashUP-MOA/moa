@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 class RecommendWidget extends StatefulWidget {
   const RecommendWidget({Key? key}) : super(key: key);
@@ -9,7 +7,6 @@ class RecommendWidget extends StatefulWidget {
 }
 
 class _RecommendState extends State<RecommendWidget> {
-  List tests = [];
 
   @override
   Widget build(BuildContext context) {
@@ -332,8 +329,8 @@ class _RecommendState extends State<RecommendWidget> {
                                       children: [
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(
-                                            'assets/movie_crazyrich.jpeg',
+                                          child: Image.network(
+                                            'https://resizing.flixster.com/5IJ0ez1JUJvg_1jshfxawRj3i-o=/180x258/v2/https://resizing.flixster.com/1-wvTp-iuqaDikrorqZBaYQdFvo=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzkzYTk5ZTVjLWJmYjYtNGYxYS1hMzQzLTI0NTAyNGNhMDVhYy5qcGc=',
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -346,7 +343,7 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                'Crazy Rich Asians',
+                                                'WEST SIDE STORY',
                                                 style: TextStyle(
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.bold
@@ -360,7 +357,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                 Padding(
                                                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                     child: Text(
-                                                        'Netflix',
+                                                        'Disney',
                                                         style: TextStyle(
                                                             fontSize: 13,
                                                             fontWeight: FontWeight.w500,
@@ -383,7 +380,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '3.9',
+                                                            '4,8',
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
                                                                 fontSize: 13,
@@ -427,8 +424,8 @@ class _RecommendState extends State<RecommendWidget> {
                                       children: [
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(
-                                            'assets/movie_fromtoday.jpeg',
+                                          child: Image.network(
+                                            'https://resizing.flixster.com/M7gpkkiPbqN16wAU07WxMl-DNEo=/180x258/v2/https://resizing.flixster.com/9MUxWQfhY5QCNDpeaFq5up8z9Ug=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQ0MGFlNTQ5LTRkMzAtNDNhMi1hZDZlLTVmMzA5YTAyNzcyNC5qcGc=',
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -441,197 +438,7 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'From Today',
-                                                  style: TextStyle(
-                                                      fontSize: 14,
-                                                      fontWeight: FontWeight.bold
-                                                  )
-                                              ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                    child: Text(
-                                                        'Wavve',
-                                                        style: TextStyle(
-                                                            fontSize: 13,
-                                                            fontWeight: FontWeight.w500,
-                                                            color: Colors.deepOrangeAccent
-                                                        )
-                                                    )
-                                                ),
-                                                Row(
-                                                  mainAxisSize: MainAxisSize.max,
-                                                  mainAxisAlignment: MainAxisAlignment.end,
-                                                  children: [
-                                                    Padding(
-                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                        child: Icon(
-                                                          Icons.star_rounded,
-                                                          color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
-                                                        )
-                                                    ),
-                                                    Padding(
-                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                        child: Text(
-                                                            '4.1',
-                                                            style: TextStyle(
-                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
-                                                                fontWeight: FontWeight.w500
-                                                            )
-                                                        )
-                                                    )
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                                child: Container(
-                                  width: 140,
-                                  height: 190,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 4,
-                                        color: Color(0x230E151B),
-                                        offset: Offset(0, 2),
-                                      )
-                                    ],
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(
-                                            'assets/movie_kiss.jpeg',
-                                            width: 140,
-                                            height: 140,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                        Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                                              child: Text(
-                                                  'A Playful Kiss',
-                                                  style: TextStyle(
-                                                      fontSize: 14,
-                                                      fontWeight: FontWeight.bold
-                                                  )
-                                              ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Padding(
-                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                    child: Text(
-                                                        'Wavve',
-                                                        style: TextStyle(
-                                                            fontSize: 13,
-                                                            fontWeight: FontWeight.w500,
-                                                            color: Colors.deepOrangeAccent
-                                                        )
-                                                    )
-                                                ),
-                                                Row(
-                                                  mainAxisSize: MainAxisSize.max,
-                                                  mainAxisAlignment: MainAxisAlignment.end,
-                                                  children: [
-                                                    Padding(
-                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                        child: Icon(
-                                                          Icons.star_rounded,
-                                                          color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
-                                                        )
-                                                    ),
-                                                    Padding(
-                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                                                        child: Text(
-                                                            '3.7',
-                                                            style: TextStyle(
-                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
-                                                                fontWeight: FontWeight.w500
-                                                            )
-                                                        )
-                                                    )
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                                child: Container(
-                                  width: 140,
-                                  height: 190,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 4,
-                                        color: Color(0x230E151B),
-                                        offset: Offset(0, 2),
-                                      )
-                                    ],
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(
-                                            'assets/movie_bridgerton.jpeg',
-                                            width: 140,
-                                            height: 140,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                        Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                                              child: Text(
-                                                  'Bridgerton',
+                                                  'PERSUASION',
                                                   style: TextStyle(
                                                       fontSize: 14,
                                                       fontWeight: FontWeight.bold
@@ -668,7 +475,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '4.5',
+                                                            '4.8',
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
                                                                 fontSize: 13,
@@ -712,8 +519,8 @@ class _RecommendState extends State<RecommendWidget> {
                                       children: [
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(
-                                            'assets/movie_ladybird.jpeg',
+                                          child: Image.network(
+                                            'https://resizing.flixster.com/ha1tQmzVp2tUMeRoGuapifrojpw=/180x258/v2/https://resizing.flixster.com/ydPRPZqSxAkNVAyzRUv0HmWt2iA=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2JkYWVlN2U5LTM1MWMtNGViZC1hMzNiLThkYTk3NzRhZDIzNC5qcGc=',
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -726,7 +533,7 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'Lady Bird',
+                                                  'DARLINGS',
                                                   style: TextStyle(
                                                       fontSize: 14,
                                                       fontWeight: FontWeight.bold
@@ -807,8 +614,8 @@ class _RecommendState extends State<RecommendWidget> {
                                       children: [
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(
-                                            'assets/movie_augustrush.jpg',
+                                          child: Image.network(
+                                            'https://resizing.flixster.com/fi0xt5CfP5hSPBH41ZCjOuEPt4M=/180x258/v2/https://resizing.flixster.com/ied4nvsXUT07jK-H2hstJUt7vaI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzFiMjZmZjYyLTI5M2EtNGY0Yy05Mjk5LWIwZDlhMWEzNjEwMi53ZWJw',
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -821,7 +628,102 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'August Rush',
+                                                  'CATCH ME IF YOU CAN',
+                                                  style: TextStyle(
+                                                      fontSize: 12,
+                                                      fontWeight: FontWeight.bold
+                                                  )
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                    child: Text(
+                                                        'Netflix',
+                                                        style: TextStyle(
+                                                            fontSize: 13,
+                                                            fontWeight: FontWeight.w500,
+                                                            color: Colors.deepOrangeAccent
+                                                        )
+                                                    )
+                                                ),
+                                                Row(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Icon(
+                                                          Icons.star_rounded,
+                                                          color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                          size: 12,
+                                                        )
+                                                    ),
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Text(
+                                                            '4.2',
+                                                            style: TextStyle(
+                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                                fontSize: 13,
+                                                                fontWeight: FontWeight.w500
+                                                            )
+                                                        )
+                                                    )
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                                child: Container(
+                                  width: 140,
+                                  height: 190,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x230E151B),
+                                        offset: Offset(0, 2),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius: BorderRadius.circular(10),
+                                          child: Image.network(
+                                            'https://resizing.flixster.com/5z4EUhgSL-2PvyMBCibiKjLuNkA=/180x258/v2/https://flxt.tmsimg.com/assets/p9253979_p_v8_aw.jpg',
+                                            width: 140,
+                                            height: 140,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                              child: Text(
+                                                  'FLIGHT',
                                                   style: TextStyle(
                                                       fontSize: 14,
                                                       fontWeight: FontWeight.bold
@@ -835,7 +737,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                 Padding(
                                                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                     child: Text(
-                                                        'Neflix',
+                                                        'Netflix',
                                                         style: TextStyle(
                                                             fontSize: 13,
                                                             fontWeight: FontWeight.w500,
@@ -902,8 +804,8 @@ class _RecommendState extends State<RecommendWidget> {
                                       children: [
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(
-                                            'assets/drama_sanae.jpeg',
+                                          child: Image.network(
+                                            'https://resizing.flixster.com/q4hcdnWwhCxahVIOVfnkQapZlr0=/180x258/v2/https://flxt.tmsimg.com/assets/p11002256_p_v8_aj.jpg',
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -916,9 +818,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'An In-house Meeting',
+                                                  'THE AGE OF ADALINE',
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 12,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -930,7 +832,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                 Padding(
                                                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                     child: Text(
-                                                        'Wavve',
+                                                        'Neflix',
                                                         style: TextStyle(
                                                             fontSize: 13,
                                                             fontWeight: FontWeight.w500,
@@ -997,8 +899,8 @@ class _RecommendState extends State<RecommendWidget> {
                                       children: [
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(
-                                            'assets/drama_brams.jpeg',
+                                          child: Image.network(
+                                            'https://resizing.flixster.com/JCYBcYy4D24a-PrcGZm_NN-9kis=/180x258/v2/https://flxt.tmsimg.com/assets/p3546062_p_v12_as.jpg',
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -1011,9 +913,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'Do you like Brahms?',
+                                                  'ALICE IN WONDERLAND',
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 12,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -1025,7 +927,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                 Padding(
                                                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                     child: Text(
-                                                        'Wavve',
+                                                        'Disney',
                                                         style: TextStyle(
                                                             fontSize: 13,
                                                             fontWeight: FontWeight.w500,
@@ -1048,7 +950,102 @@ class _RecommendState extends State<RecommendWidget> {
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '4.1',
+                                                            '3.7',
+                                                            style: TextStyle(
+                                                                color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                                fontSize: 13,
+                                                                fontWeight: FontWeight.w500
+                                                            )
+                                                        )
+                                                    )
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                                child: Container(
+                                  width: 140,
+                                  height: 190,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 4,
+                                        color: Color(0x230E151B),
+                                        offset: Offset(0, 2),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius: BorderRadius.circular(10),
+                                          child: Image.network(
+                                            'https://resizing.flixster.com/sR1xHwxUgr_zoH8rR9qnjWh952E=/180x258/v2/https://flxt.tmsimg.com/assets/p17931073_p_v13_ac.jpg',
+                                            width: 140,
+                                            height: 140,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                              child: Text(
+                                                  '365 DAYS',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.bold
+                                                  )
+                                              ),
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Padding(
+                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                    child: Text(
+                                                        'Netflix',
+                                                        style: TextStyle(
+                                                            fontSize: 13,
+                                                            fontWeight: FontWeight.w500,
+                                                            color: Colors.deepOrangeAccent
+                                                        )
+                                                    )
+                                                ),
+                                                Row(
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Icon(
+                                                          Icons.star_rounded,
+                                                          color: Color.fromRGBO(78, 67, 187, 1.0),
+                                                          size: 12,
+                                                        )
+                                                    ),
+                                                    Padding(
+                                                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                                        child: Text(
+                                                            '3.5',
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
                                                                 fontSize: 13,
