@@ -121,25 +121,68 @@ class _ReviewInfoWidgetState extends State<ReviewInfoWidget> {
                                                             clipBehavior: Clip.none,
                                                             children: [
                                                                 Padding(
-                                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                                                                    padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 5),
                                                                     child: Text(
                                                                         '#japan',
                                                                     ),
                                                                 ),
                                                                 Padding(
-                                                                    padding: EdgeInsetsDirectional.fromSTEB(8, 4, 0, 0),
+                                                                    padding: EdgeInsetsDirectional.fromSTEB(8, 4, 0, 5),
                                                                     child: Text(
                                                                         '#romance',
                                                                     ),
                                                                 ),
                                                                 Padding(
-                                                                    padding: EdgeInsetsDirectional.fromSTEB(8, 4, 0, 0),
+                                                                    padding: EdgeInsetsDirectional.fromSTEB(8, 4, 0, 5),
                                                                     child: Text(
                                                                         '#drama',
                                                                     ),
                                                                 ),
                                                             ],
                                                         ),
+                                                        Container(
+                                                            width: 170,
+                                                            height: 30,
+                                                            margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                                            decoration: BoxDecoration(
+                                                                color: Colors.white,
+                                                                boxShadow: [
+                                                                    BoxShadow(
+                                                                        blurRadius: 5,
+                                                                        color: Color(0x27000000),
+                                                                        offset: Offset(0, 3),
+                                                                    )
+                                                                ]
+                                                            ),
+                                                            child: Padding(
+                                                                padding: EdgeInsetsDirectional.fromSTEB(3, 3, 3, 3),
+                                                                child: Row(
+                                                                    children: [
+                                                                        Container(
+                                                                            width: 30,
+                                                                            height: 30,
+                                                                            clipBehavior: Clip.antiAlias,
+                                                                            decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                            ),
+                                                                            child: Image.asset('assets/watcha.png'),
+                                                                        ),
+                                                                        Expanded(
+                                                                            child: Padding(
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                child: Text(
+                                                                                    'Watcha',
+                                                                                    style: TextStyle(
+                                                                                        fontSize: 15,
+                                                                                        fontWeight: FontWeight.bold
+                                                                                    )
+                                                                                )
+                                                                            ),
+                                                                        ),
+                                                                    ],
+                                                                ),
+                                                            )
+                                                        )
                                                     ],
                                                 ),
                                             ),
@@ -401,7 +444,7 @@ class _ReviewInfoWidgetState extends State<ReviewInfoWidget> {
                                                                                                 'genre',
                                                                                                 style: TextStyle(
                                                                                                     fontFamily: 'Popins',
-                                                                                                    fontSize: 18,
+                                                                                                    fontSize: 15,
                                                                                                     fontWeight: FontWeight.bold,
                                                                                                 ),
                                                                                             ),
@@ -412,7 +455,37 @@ class _ReviewInfoWidgetState extends State<ReviewInfoWidget> {
                                                                                                         'romance/drama',
                                                                                                         style: TextStyle(
                                                                                                             fontFamily: 'Poppins',
-                                                                                                            fontSize: 18,
+                                                                                                            fontSize: 15,
+                                                                                                            fontWeight: FontWeight.w400,
+                                                                                                        ),
+                                                                                                    ),
+                                                                                                ),
+                                                                                            ),
+                                                                                        ],
+                                                                                    ),
+                                                                                ),
+                                                                                Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 15),
+                                                                                    child: Row(
+                                                                                        mainAxisSize: MainAxisSize.max,
+                                                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                        children: [
+                                                                                            Text(
+                                                                                                'Director',
+                                                                                                style: TextStyle(
+                                                                                                    fontFamily: 'Popins',
+                                                                                                    fontSize: 15,
+                                                                                                    fontWeight: FontWeight.bold,
+                                                                                                ),
+                                                                                            ),
+                                                                                            Expanded(
+                                                                                                child: Padding(
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                                                                                    child: Text(
+                                                                                                        'Shunji Iwai',
+                                                                                                        style: TextStyle(
+                                                                                                            fontFamily: 'Poppins',
+                                                                                                            fontSize: 15,
                                                                                                             fontWeight: FontWeight.w400,
                                                                                                         ),
                                                                                                     ),
@@ -432,14 +505,14 @@ class _ReviewInfoWidgetState extends State<ReviewInfoWidget> {
                                                                                                 child: Icon(
                                                                                                     Icons.video_collection_rounded,
                                                                                                     color: Color(0xff4B39EF),//primaryColor
-                                                                                                    size: 24,
+                                                                                                    size: 22,
                                                                                                 ),
                                                                                             ),
                                                                                             Text(
                                                                                                 'Trailer',
                                                                                                 style: TextStyle(
                                                                                                     fontFamily: 'Poppins',
-                                                                                                    fontSize: 16,
+                                                                                                    fontSize: 15,
                                                                                                 ),
                                                                                             ),
                                                                                         ],
