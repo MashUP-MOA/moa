@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'dart:async';
+
 
 class RecommendWidget extends StatefulWidget {
   const RecommendWidget({Key? key}) : super(key: key);
@@ -7,6 +11,17 @@ class RecommendWidget extends StatefulWidget {
 }
 
 class _RecommendState extends State<RecommendWidget> {
+  var data;
+
+  @override
+  void initState() {
+    Future.microtask(() async{
+      var res = await http.get(Uri.parse('http://10.0.2.2:5000'));
+      data = res.body;
+      print(data);
+      print("hello");
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
