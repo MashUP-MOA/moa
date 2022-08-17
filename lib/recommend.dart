@@ -11,15 +11,17 @@ class RecommendWidget extends StatefulWidget {
 }
 
 class _RecommendState extends State<RecommendWidget> {
-  var data;
+  var results;
 
   @override
   void initState() {
     Future.microtask(() async{
       var res = await http.get(Uri.parse('http://10.0.2.2:5000'));
-      data = res.body;
-      print(data);
-      print("hello");
+      var dataDecode = jsonDecode(res.body);
+      setState(() {
+        results = dataDecode;
+        print(results['results'][0]);
+      });
     });
   }
 
@@ -36,7 +38,10 @@ class _RecommendState extends State<RecommendWidget> {
         ),
         backgroundColor: Color.fromRGBO(75, 57, 239, 1),
       ),
-      body: SafeArea(
+      body: results['results'].length == 0
+        ? new Container()
+        :
+        SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: SingleChildScrollView(
@@ -369,7 +374,7 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                'WEST SIDE STORY',
+                                                results['results'][0]['title'],
                                                 style: TextStyle(
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.bold
