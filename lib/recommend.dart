@@ -292,6 +292,7 @@ class _RecommendState extends State<RecommendWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
@@ -303,7 +304,17 @@ class _RecommendState extends State<RecommendWidget> {
                                     fontWeight: FontWeight.w700,
                                   )
                                 ),
-                              )
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                                child: IconButton(
+                                  icon: const Icon(Icons.refresh),
+                                  onPressed: () {
+
+                                  },
+                                  color: Colors.white,
+                                )
+                              ),
                             ],
                           )
                         ),
