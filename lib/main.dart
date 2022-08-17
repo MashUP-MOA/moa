@@ -3,7 +3,7 @@ import 'home.dart';
 import 'recommend.dart';
 import 'mypage.dart';
 import 'review.dart';
-import 'loading.dart';
+import 'rating.dart';
 
 void main() => runApp(const MyApp());
 
@@ -34,6 +34,7 @@ class _MarketPageState extends State<MyWidget> {
 
   final List _widgetOptions = [
     HomeWidget(),
+    RatingWidget(),
     RecommendWidget(),
     ReviewWidget(),
     MypageWidget(),
@@ -56,6 +57,10 @@ class _MarketPageState extends State<MyWidget> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star_rate_rounded),
+            label: 'Rating',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.lightbulb_outline),

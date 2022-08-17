@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
+import 'loading.dart';
 
 
 class RecommendWidget extends StatefulWidget {
@@ -41,7 +42,7 @@ class _RecommendState extends State<RecommendWidget> {
         backgroundColor: Color.fromRGBO(75, 57, 239, 1),
       ),
       body: results.length == 0
-        ? new Container()
+        ? LoadingWidget()
         :
         SafeArea(
         child: GestureDetector(
@@ -413,7 +414,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '4,8',
+                                                            '4.8',
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
                                                                 fontSize: 13,

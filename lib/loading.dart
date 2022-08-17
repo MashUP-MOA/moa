@@ -23,16 +23,6 @@ class _LoadingState extends State<LoadingWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'SMART RECOMMEND',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          backgroundColor: Color.fromRGBO(75, 57, 239, 1),
-        ),
         body: Center(
           child: CircularProgressIndicator(),
         )
