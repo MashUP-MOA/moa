@@ -11,18 +11,20 @@ class RecommendWidget extends StatefulWidget {
 }
 
 class _RecommendState extends State<RecommendWidget> {
-  var results;
+  List results = [];
+
+  Future getData() async {
+    http.Response res = await http.get(Uri.parse('http://10.0.2.2:5000'));
+    Map dataDecode = jsonDecode(res.body);
+    setState(() {
+      results = dataDecode['results'];
+    });
+  }
 
   @override
   void initState() {
-    Future.microtask(() async{
-      var res = await http.get(Uri.parse('http://10.0.2.2:5000'));
-      var dataDecode = jsonDecode(res.body);
-      setState(() {
-        results = dataDecode;
-        print(results['results'][0]);
-      });
-    });
+    super.initState();
+    getData();
   }
 
   @override
@@ -38,7 +40,7 @@ class _RecommendState extends State<RecommendWidget> {
         ),
         backgroundColor: Color.fromRGBO(75, 57, 239, 1),
       ),
-      body: results['results'].length == 0
+      body: results.length == 0
         ? new Container()
         :
         SafeArea(
@@ -315,7 +317,7 @@ class _RecommendState extends State<RecommendWidget> {
                                 child: IconButton(
                                   icon: const Icon(Icons.refresh),
                                   onPressed: () {
-
+                                    getData();
                                   },
                                   color: Colors.white,
                                 )
@@ -374,7 +376,7 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                results['results'][0]['title'],
+                                                results[0]['title'],
                                                 style: TextStyle(
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.bold
