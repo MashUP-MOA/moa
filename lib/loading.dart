@@ -11,16 +11,6 @@ class LoadingWidget extends StatefulWidget {
 class _LoadingState extends State<LoadingWidget> {
 
   @override
-  void initState() {
-    Timer(Duration(milliseconds: 1000), () {
-      Navigator.push(context, MaterialPageRoute(
-          builder: (context) => RecommendWidget()
-      )
-      );
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(

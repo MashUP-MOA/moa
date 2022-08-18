@@ -16,10 +16,11 @@ class _RecommendState extends State<RecommendWidget> {
 
   Future getData() async {
     http.Response res = await http.get(Uri.parse('http://10.0.2.2:5000'));
-    Map dataDecode = jsonDecode(res.body);
-    setState(() {
-      results = dataDecode['results'];
-    });
+    if (mounted){
+      setState(() {
+        results = jsonDecode(res.body);
+      });
+    }
   }
 
   @override
@@ -364,7 +365,7 @@ class _RecommendState extends State<RecommendWidget> {
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
                                           child: Image.network(
-                                            'https://resizing.flixster.com/5IJ0ez1JUJvg_1jshfxawRj3i-o=/180x258/v2/https://resizing.flixster.com/1-wvTp-iuqaDikrorqZBaYQdFvo=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzkzYTk5ZTVjLWJmYjYtNGYxYS1hMzQzLTI0NTAyNGNhMDVhYy5qcGc=',
+                                            results[0]['image'],
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -379,7 +380,7 @@ class _RecommendState extends State<RecommendWidget> {
                                               child: Text(
                                                 results[0]['title'],
                                                 style: TextStyle(
-                                                  fontSize: 14,
+                                                  fontSize: 9,
                                                   fontWeight: FontWeight.bold
                                                 )
                                               ),
@@ -393,7 +394,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     child: Text(
                                                         'Disney',
                                                         style: TextStyle(
-                                                            fontSize: 13,
+                                                            fontSize: 10,
                                                             fontWeight: FontWeight.w500,
                                                             color: Colors.deepOrangeAccent
                                                         )
@@ -408,16 +409,16 @@ class _RecommendState extends State<RecommendWidget> {
                                                         child: Icon(
                                                           Icons.star_rounded,
                                                           color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
+                                                          size: 10,
                                                         )
                                                     ),
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '4.8',
+                                                            results[0]['mean'].toString(),
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
+                                                                fontSize: 10,
                                                                 fontWeight: FontWeight.w500
                                                             )
                                                         )
@@ -459,7 +460,7 @@ class _RecommendState extends State<RecommendWidget> {
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
                                           child: Image.network(
-                                            'https://resizing.flixster.com/M7gpkkiPbqN16wAU07WxMl-DNEo=/180x258/v2/https://resizing.flixster.com/9MUxWQfhY5QCNDpeaFq5up8z9Ug=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQ0MGFlNTQ5LTRkMzAtNDNhMi1hZDZlLTVmMzA5YTAyNzcyNC5qcGc=',
+                                            results[1]['image'],
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -472,9 +473,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'PERSUASION',
+                                                  results[1]['title'],
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 9,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -488,7 +489,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     child: Text(
                                                         'Netflix',
                                                         style: TextStyle(
-                                                            fontSize: 13,
+                                                            fontSize: 10,
                                                             fontWeight: FontWeight.w500,
                                                             color: Colors.deepOrangeAccent
                                                         )
@@ -503,16 +504,16 @@ class _RecommendState extends State<RecommendWidget> {
                                                         child: Icon(
                                                           Icons.star_rounded,
                                                           color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
+                                                          size: 10,
                                                         )
                                                     ),
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '4.8',
+                                                            results[1]['mean'].toString(),
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
+                                                                fontSize: 10,
                                                                 fontWeight: FontWeight.w500
                                                             )
                                                         )
@@ -554,7 +555,7 @@ class _RecommendState extends State<RecommendWidget> {
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
                                           child: Image.network(
-                                            'https://resizing.flixster.com/ha1tQmzVp2tUMeRoGuapifrojpw=/180x258/v2/https://resizing.flixster.com/ydPRPZqSxAkNVAyzRUv0HmWt2iA=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2JkYWVlN2U5LTM1MWMtNGViZC1hMzNiLThkYTk3NzRhZDIzNC5qcGc=',
+                                            results[2]['image'],
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -567,9 +568,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'DARLINGS',
+                                                  results[2]['title'],
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 9,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -583,7 +584,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     child: Text(
                                                         'Netflix',
                                                         style: TextStyle(
-                                                            fontSize: 13,
+                                                            fontSize: 10,
                                                             fontWeight: FontWeight.w500,
                                                             color: Colors.deepOrangeAccent
                                                         )
@@ -598,16 +599,16 @@ class _RecommendState extends State<RecommendWidget> {
                                                         child: Icon(
                                                           Icons.star_rounded,
                                                           color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
+                                                          size: 10,
                                                         )
                                                     ),
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '4.3',
+                                                            results[2]['mean'].toString(),
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
+                                                                fontSize: 10,
                                                                 fontWeight: FontWeight.w500
                                                             )
                                                         )
@@ -649,7 +650,7 @@ class _RecommendState extends State<RecommendWidget> {
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
                                           child: Image.network(
-                                            'https://resizing.flixster.com/fi0xt5CfP5hSPBH41ZCjOuEPt4M=/180x258/v2/https://resizing.flixster.com/ied4nvsXUT07jK-H2hstJUt7vaI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzFiMjZmZjYyLTI5M2EtNGY0Yy05Mjk5LWIwZDlhMWEzNjEwMi53ZWJw',
+                                            results[3]['image'],
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -662,9 +663,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'CATCH ME IF YOU CAN',
+                                                  results[3]['title'],
                                                   style: TextStyle(
-                                                      fontSize: 12,
+                                                      fontSize: 9,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -678,7 +679,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     child: Text(
                                                         'Netflix',
                                                         style: TextStyle(
-                                                            fontSize: 13,
+                                                            fontSize: 10,
                                                             fontWeight: FontWeight.w500,
                                                             color: Colors.deepOrangeAccent
                                                         )
@@ -693,16 +694,16 @@ class _RecommendState extends State<RecommendWidget> {
                                                         child: Icon(
                                                           Icons.star_rounded,
                                                           color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
+                                                          size: 10,
                                                         )
                                                     ),
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '4.2',
+                                                            results[3]['mean'].toString(),
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
+                                                                fontSize: 10,
                                                                 fontWeight: FontWeight.w500
                                                             )
                                                         )
@@ -744,7 +745,7 @@ class _RecommendState extends State<RecommendWidget> {
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
                                           child: Image.network(
-                                            'https://resizing.flixster.com/5z4EUhgSL-2PvyMBCibiKjLuNkA=/180x258/v2/https://flxt.tmsimg.com/assets/p9253979_p_v8_aw.jpg',
+                                            results[4]['image'],
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -757,9 +758,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'FLIGHT',
+                                                  results[4]['title'],
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 9,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -773,7 +774,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     child: Text(
                                                         'Netflix',
                                                         style: TextStyle(
-                                                            fontSize: 13,
+                                                            fontSize: 10,
                                                             fontWeight: FontWeight.w500,
                                                             color: Colors.deepOrangeAccent
                                                         )
@@ -788,16 +789,16 @@ class _RecommendState extends State<RecommendWidget> {
                                                         child: Icon(
                                                           Icons.star_rounded,
                                                           color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
+                                                          size: 10,
                                                         )
                                                     ),
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '4.0',
+                                                            results[4]['mean'].toString(),
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
+                                                                fontSize: 10,
                                                                 fontWeight: FontWeight.w500
                                                             )
                                                         )
@@ -839,7 +840,7 @@ class _RecommendState extends State<RecommendWidget> {
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
                                           child: Image.network(
-                                            'https://resizing.flixster.com/q4hcdnWwhCxahVIOVfnkQapZlr0=/180x258/v2/https://flxt.tmsimg.com/assets/p11002256_p_v8_aj.jpg',
+                                            results[5]['image'],
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -852,9 +853,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'THE AGE OF ADALINE',
+                                                  results[5]['title'],
                                                   style: TextStyle(
-                                                      fontSize: 12,
+                                                      fontSize: 9,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -868,7 +869,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     child: Text(
                                                         'Neflix',
                                                         style: TextStyle(
-                                                            fontSize: 13,
+                                                            fontSize: 10,
                                                             fontWeight: FontWeight.w500,
                                                             color: Colors.deepOrangeAccent
                                                         )
@@ -883,16 +884,16 @@ class _RecommendState extends State<RecommendWidget> {
                                                         child: Icon(
                                                           Icons.star_rounded,
                                                           color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
+                                                          size: 10,
                                                         )
                                                     ),
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '3.8',
+                                                            results[5]['mean'].toString(),
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
+                                                                fontSize: 10,
                                                                 fontWeight: FontWeight.w500
                                                             )
                                                         )
@@ -934,7 +935,7 @@ class _RecommendState extends State<RecommendWidget> {
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
                                           child: Image.network(
-                                            'https://resizing.flixster.com/JCYBcYy4D24a-PrcGZm_NN-9kis=/180x258/v2/https://flxt.tmsimg.com/assets/p3546062_p_v12_as.jpg',
+                                            results[6]['image'],
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -947,9 +948,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  'ALICE IN WONDERLAND',
+                                                  results[6]['title'],
                                                   style: TextStyle(
-                                                      fontSize: 12,
+                                                      fontSize: 9,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -963,7 +964,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     child: Text(
                                                         'Disney',
                                                         style: TextStyle(
-                                                            fontSize: 13,
+                                                            fontSize: 10,
                                                             fontWeight: FontWeight.w500,
                                                             color: Colors.deepOrangeAccent
                                                         )
@@ -978,16 +979,16 @@ class _RecommendState extends State<RecommendWidget> {
                                                         child: Icon(
                                                           Icons.star_rounded,
                                                           color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
+                                                          size: 10,
                                                         )
                                                     ),
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '3.7',
+                                                            results[6]['mean'].toString(),
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
+                                                                fontSize: 10,
                                                                 fontWeight: FontWeight.w500
                                                             )
                                                         )
@@ -1029,7 +1030,7 @@ class _RecommendState extends State<RecommendWidget> {
                                         ClipRRect(
                                           borderRadius: BorderRadius.circular(10),
                                           child: Image.network(
-                                            'https://resizing.flixster.com/sR1xHwxUgr_zoH8rR9qnjWh952E=/180x258/v2/https://flxt.tmsimg.com/assets/p17931073_p_v13_ac.jpg',
+                                            results[7]['image'],
                                             width: 140,
                                             height: 140,
                                             fit: BoxFit.cover,
@@ -1042,9 +1043,9 @@ class _RecommendState extends State<RecommendWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                               child: Text(
-                                                  '365 DAYS',
+                                                  results[7]['title'],
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 9,
                                                       fontWeight: FontWeight.bold
                                                   )
                                               ),
@@ -1058,7 +1059,7 @@ class _RecommendState extends State<RecommendWidget> {
                                                     child: Text(
                                                         'Netflix',
                                                         style: TextStyle(
-                                                            fontSize: 13,
+                                                            fontSize: 10,
                                                             fontWeight: FontWeight.w500,
                                                             color: Colors.deepOrangeAccent
                                                         )
@@ -1073,16 +1074,16 @@ class _RecommendState extends State<RecommendWidget> {
                                                         child: Icon(
                                                           Icons.star_rounded,
                                                           color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                          size: 12,
+                                                          size: 10,
                                                         )
                                                     ),
                                                     Padding(
                                                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                         child: Text(
-                                                            '3.5',
+                                                            results[7]['mean'].toString(),
                                                             style: TextStyle(
                                                                 color: Color.fromRGBO(78, 67, 187, 1.0),
-                                                                fontSize: 13,
+                                                                fontSize: 10,
                                                                 fontWeight: FontWeight.w500
                                                             )
                                                         )
