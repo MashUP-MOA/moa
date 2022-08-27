@@ -3,12 +3,18 @@
 2022 하계 SJSU SVSTIP 해외교육에서 MashUP 팀이 진행한 프로젝트입니다. <br />
 MOA는 <b>사용자의 취향을 리뷰와 콘텐츠 평가 데이터를 기반으로 분석해, 사용자 맞춤 OTT 플랫폼 및 콘텐츠를 추천해주는 애플리케이션📱</b>입니다. <br />
 
-# 개발
+## MEMBER
+| <img src="https://user-images.githubusercontent.com/39795055/187029379-d3a2ecd8-6af7-473b-8e37-569bc9886dd5.png" width="150"> | <img src="https://user-images.githubusercontent.com/39795055/187029386-3e0c16e1-00fe-4efd-b5bf-e8640acd927b.png" width="150"> | <img src="https://user-images.githubusercontent.com/39795055/187029388-12eb817e-acf4-4530-9ee2-25b0c71e0d94.png" width="150"> | <img src="https://user-images.githubusercontent.com/39795055/187029384-1c311fe8-1b57-4f98-866f-4c22506bd804.png" width="150"> | 
+|:---:|:---:|:---:|:---:|
+| [조현동](https://github.com/brighteast) | [김지수](https://github.com/earthssu) | [최윤영](https://github.com/youngyoonii) | [서정민](https://github.com/jeongmin1217) |
+| <div>기획</div><div>API 서버 / 추천 알고리즘</div> | <div>기획</div><div>UI/UX 개발</div> | <div>기획</div><div>UI/UX 디자인</div> | <div>기획</div><div>UI/UX 개발</div> |
+
+## 개발
 ### 모바일 앱 (Android & iOS)
 - `Dart` - 2.17.6
 - `Flutter` - 3.0.0
 
-# UI/UX
+## UI/UX
 ### 메인 화면
 <img width="348" alt="home" src="https://user-images.githubusercontent.com/39795055/187028463-3067d294-1dba-4583-99bf-32db98e6fa09.png"> <br />
 <b>맞춤 추천 콘텐츠를 요약</b>해 확인해볼 수 있습니다. 사용자의 <b>취향과 가장 비슷한 사용자들이 쓴 리뷰</b>를 한 눈에 모아 확인할 수 있습니다.
